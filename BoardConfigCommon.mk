@@ -106,10 +106,5 @@ BOARD_USES_SYNC_MODE_FOR_MEDIA := true
 # Enable Minikin text layout engine (will be the default soon)
 USE_MINIKIN := true
 
-# Twrp
-ifneq ($(strip $(wildcard $(TOP)/bootable/recovery/variables.h)),)
--include device/samsung/zero-common/twrp.mk
-endif
-
 # inherit from the proprietary version
 -include vendor/samsung/zero-common/BoardConfigVendor.mk
